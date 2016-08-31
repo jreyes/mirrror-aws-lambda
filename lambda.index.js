@@ -4,10 +4,10 @@ const IOT_COMMANDS = [
     createCommand('e219f5e9-2d58-4fde-807b-cefec4dc4900', 'home'),
     createCommand('e219f5e9-2d58-4fde-807b-cefec4dc4901', 'c. b. s.'),
     createCommand('e219f5e9-2d58-4fde-807b-cefec4dc4902', 'connect to the internet'),
-    createCommand('e219f5e9-2d58-4fde-807b-cefec4dc4903', 'x. k. c. d.'),
-    createCommand('e219f5e9-2d58-4fde-807b-cefec4dc4904', 'display my flickr stream'),
+    createCommand('e219f5e9-2d58-4fde-807b-cefec4dc4903', 'xkcd'),
+    createCommand('e219f5e9-2d58-4fde-807b-cefec4dc4904', 'flickr'),
     createCommand('e219f5e9-2d58-4fde-807b-cefec4dc4905', 'miku time'),
-    createCommand('e219f5e9-2d58-4fde-807b-cefec4dc4906', 'new music releases')
+    createCommand('e219f5e9-2d58-4fde-807b-cefec4dc4906', 'new releases from spot')
 ];
 
 var AWS = require('aws-sdk');
@@ -96,7 +96,7 @@ function createCommand(applianceId, command) {
         modelName: 'ST01',
         version: 'VER01',
         friendlyName: command,
-        friendlyDescription: command + " command",
+        friendlyDescription: "Another Smart Mirror command",
         isReachable: true,
         actions: ['turnOn']
     };
